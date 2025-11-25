@@ -1,103 +1,139 @@
-# KnowEdge Tech Hub - Landing Page
+# KnowEdge Tech Hub - Scholarship Landing Page
 
-A modern, responsive landing page for KnowEdge Tech Hub's Pilot Cohort program, built with React, TypeScript, Tailwind CSS, and Framer Motion.
+A modern, responsive landing page for KnowEdge Tech Hub's Scholarship Program, built with React, TypeScript, Tailwind CSS, and Framer Motion. The application features a beautiful dark/light mode toggle and a fully responsive design.
 
-## 🚀 Features
+![Preview](https://via.placeholder.com/1200x600/36c9cd/ffffff?text=KnowEdge+Tech+Hub)  
+*Screenshot of the landing page*
 
-- **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
-- **Accessible**: WCAG compliant with semantic HTML and ARIA labels
-- **Animated**: Smooth scroll animations powered by Framer Motion
-- **Modern Design**: Clean, professional UI with brand colors (#36c9cd)
-- **SEO Optimized**: Proper meta tags and semantic structure
-- **Fast Performance**: Built with Vite for optimal loading speed
+## ✨ Features
 
-## 🛠️ Tech Stack
+- 🌓 **Dark/Light Mode**: Toggle between light and dark themes with system preference detection
+- 📱 **Fully Responsive**: Optimized for all device sizes
+- ⚡ **Blazing Fast**: Built with Vite for optimal performance
+- 🎨 **Modern UI**: Clean, accessible interface with smooth animations
+- 🔍 **SEO Optimized**: Proper meta tags and semantic HTML
+- ♿ **Accessible**: WCAG compliant with keyboard navigation support
 
-- **Framework**: React 18 + TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
+## 🛠 Tech Stack
+
+- **Frontend Framework**: React 18 with TypeScript
+- **Styling**: 
+  - Tailwind CSS for utility-first styling
+  - shadcn/ui for accessible components
+- **State Management**: React Context API
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
 - **Build Tool**: Vite
-- **Font**: Inter (Google Fonts)
+- **Linting**: ESLint + Prettier
 
-## 📦 Installation
+## 🚀 Getting Started
 
-```bash
-# Clone the repository
-git clone <YOUR_GIT_URL>
+### Prerequisites
 
-# Navigate to project directory
-cd <YOUR_PROJECT_NAME>
+- Node.js (v16 or later)
+- npm or yarn
 
-# Install dependencies
-npm install
+### Installation
 
-# Start development server
-npm run dev
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/knowedge-scholarship-landingpage.git
+   cd knowedge-scholarship-landingpage
+   ```
 
-## 🏗️ Project Structure
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
+
+## 🏗 Project Structure
 
 ```
 src/
-├── components/
-│   ├── Navbar.tsx          # Navigation with mobile menu
-│   ├── Hero.tsx            # Hero section with CTAs
-│   ├── ProgramHighlights.tsx  # Program overview cards
-│   ├── CurriculumGrid.tsx  # Skills and curriculum showcase
-│   ├── ScholarshipCard.tsx # Scholarship information
-│   ├── FAQ.tsx             # Frequently asked questions
-│   ├── CTASection.tsx      # Final call-to-action
-│   └── Footer.tsx          # Footer with links and contact
-├── assets/
-│   ├── hero.jpg           # Hero section image
-│   └── scholarship.jpg    # Scholarship section image
+├── components/           # Reusable UI components
+│   ├── ui/              # shadcn/ui components
+│   ├── Navbar.tsx       # Navigation with theme toggle
+│   ├── Hero.tsx         # Hero section with CTAs
+│   ├── ProgramHighlights.tsx  # Program features
+│   ├── CurriculumGrid.tsx     # Course curriculum
+│   ├── ScholarshipCard.tsx    # Scholarship details
+│   ├── FAQ.tsx          # Frequently asked questions
+│   ├── CTASection.tsx   # Call-to-action section
+│   ├── Footer.tsx       # Footer component
+│   ├── theme-provider.tsx  # Theme context provider
+│   └── theme-toggle.tsx    # Dark/light mode toggle
 ├── pages/
-│   └── Index.tsx          # Main landing page
-└── index.css              # Global styles and design system
+│   └── Index.tsx        # Main landing page
+├── lib/
+│   └── utils.ts         # Utility functions
+└── App.tsx              # Main application component
 ```
 
-## 🎨 Design System
+## 🎨 Theme System
 
-The project uses a comprehensive design system defined in `src/index.css`:
+The application features a comprehensive theming system:
 
-### Brand Colors
-- **Primary**: `#36c9cd` (Teal) - Used for CTAs and accents
-- **Background**: White
-- **Foreground**: Dark gray/black for text
+- **Light/Dark Mode**: Toggle between light and dark themes
+- **System Preference**: Automatically detects and applies system theme
+- **Smooth Transitions**: Theme changes are animated for a polished feel
 
-### Typography
-- **Font Family**: Inter
-- **Headings**: Semibold weight
-- **Body**: Regular weight
+### Theme Colors
 
-### Custom CSS Variables
 ```css
---primary: 187 69% 51%;           /* Brand teal */
---hero-gradient: ...              /* Subtle background gradient */
---card-shadow: ...                /* Consistent card shadows */
---card-hover-shadow: ...          /* Interactive hover effects */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --primary: 187 69% 51%;  /* Brand teal */
+  --primary-foreground: 0 0% 100%;
+  /* ... other theme variables ... */
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --primary: 187 69% 51%;  /* Brand teal */
+  --primary-foreground: 0 0% 100%;
+  /* ... other dark theme variables ... */
+}
 ```
 
-## 🧩 Components
+## 🧩 Key Components
 
-### Navbar
-- Sticky header with smooth scrolling
-- Mobile-responsive hamburger menu
-- Animated menu transitions
+### Theme Toggle
+- Accessible button for switching between light/dark themes
+- Shows appropriate icon based on current theme
+- Smooth transitions between theme changes
 
-### Hero
-- Eye-catching headline with CTA buttons
-- Program highlights badges
-- Generated hero image with brand colors
+### Responsive Navigation
+- Mobile-first responsive design
+- Smooth scroll to sections
+- Animated mobile menu
 
-### ProgramHighlights
-- 4-card grid layout
-- Hover effects with smooth transitions
-- Icons from Lucide React
+### Program Highlights
+- Feature cards with icons
+- Hover animations
+- Responsive grid layout
 
-### CurriculumGrid
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [shadcn/ui](https://ui.shadcn.com/) for the beautiful component library
+- [Tailwind CSS](https://tailwindcss.com/) for utility-first CSS
+- [Framer Motion](https://www.framer.com/motion/) for animations
 - 8-card skills showcase
 - Color-coded hover effects
 - Learning philosophy section
