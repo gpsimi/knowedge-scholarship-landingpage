@@ -86,13 +86,13 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <Phone className="mr-2 h-5 w-5 flex-shrink-0 text-primary" />
-                <a href="tel:+234" className="hover:text-primary">
-                  +234 XXX XXX XXXX
+                <a href="tel:+2349058279411" className="hover:text-primary">
+                  +2349058279411
                 </a>
               </li>
               <li className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 flex-shrink-0 text-primary" />
-                <span>Nigeria, Africa</span>
+                <span>Lagos, Nigeria</span>
               </li>
             </ul>
           </div>
