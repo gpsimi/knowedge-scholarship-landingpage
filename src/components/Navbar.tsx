@@ -86,30 +86,72 @@ const Navbar = () => {
       {/* Mobile menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-t bg-background"
-          >
-            <div className="space-y-1 px-4 pb-3 pt-2">
-              {navLinks.map((link) => (
+          <>
+            {/* Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              exit={{ opacity: 0, transition: { delay: 0.1 } }}
+              className="fixed inset-0 z-40 bg-black md:hidden"
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            
+            {/* Mobile Menu */}
+            <motion.div
+              initial={{ y: '-100%', opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: '-100%', opacity: 0 }}
+              transition={{ 
+                type: 'spring',
+                damping: 25,
+                stiffness: 300,
+                mass: 0.8
+              }}
+              className="fixed left-0 right-0 top-0 z-50 bg-background shadow-xl md:hidden"
+              style={{
+                background: 'hsl(var(--background))'
+              }}
+            >
+              <div className="flex h-16 items-center justify-between px-6">
+                <div className="flex items-center space-x-2">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
+                    <span className="text-lg font-bold text-primary-foreground">K</span>
+                  </div>
+                  <span className="text-lg font-bold">KnowEdge Tech Hub</span>
+                </div>
                 <button
-                  key={link.name}
-                  onClick={() => scrollToSection(link.href)}
-                  className="block w-full text-left rounded-md px-3 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="rounded-md p-2 text-foreground hover:bg-accent hover:text-accent-foreground"
                 >
-                  {link.name}
+                  <X className="h-6 w-6" />
                 </button>
-              ))}
-              <Button 
-                onClick={() => scrollToSection("#scholarship")}
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
-              >
-                Join Waitlist
-              </Button>
-            </div>
-          </motion.div>
+              </div>
+              
+              <nav className="flex flex-col p-4 pt-0">
+                {navLinks.map((link) => (
+                  <button
+                    key={link.name}
+                    onClick={() => {
+                      scrollToSection(link.href);
+                      setMobileMenuOpen(false);
+                    }}
+                    className="w-full px-6 py-4 text-left text-foreground transition-colors hover:bg-accent/50 border-t border-border/30"
+                  >
+                    {link.name}
+                  </button>
+                ))}
+                <Button 
+                  onClick={() => {
+                    scrollToSection("#scholarship");
+                    setMobileMenuOpen(false);
+                  }}
+                  className="w-full mt-2 mx-4 mb-4 bg-primary py-5 text-lg font-medium text-primary-foreground hover:bg-primary/90 rounded-lg"
+                >
+                  Join Waitlist
+                </Button>
+              </nav>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </nav>
