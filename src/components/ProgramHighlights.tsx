@@ -8,25 +8,25 @@ const ProgramHighlights = () => {
       icon: Calendar,
       title: "10-Week Program",
       description: "February - April 2026",
-      detail: "Intensive beginner-level training",
+      detail: "Weekend classes (Saturdays & Sundays)",
     },
     {
       icon: Monitor,
       title: "100% Virtual",
       description: "Learn from anywhere",
-      detail: "Weekend classes (Sat & Sun)",
+      detail: "Live online sessions with replays",
     },
     {
       icon: TrendingUp,
       title: "Two Tracks",
-      description: "Data Analysis & Data Science",
-      detail: "Choose your path to success",
+      description: "Beginner Level Programs",
+      detail: "Data Analysis & Data Science",
     },
     {
       icon: Users,
       title: "Expert Mentorship",
       description: "Industry professionals",
-      detail: "Real-world guidance & support",
+      detail: "Real-world project guidance",
     },
   ];
 
@@ -62,11 +62,11 @@ const ProgramHighlights = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
-            Program Overview
+            Program Overview: The Pilot Cohort
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our Pilot Cohort marks the beginning of a new learning model designed for impact and
-            mastery.
+            Our Pilot Cohort marks the beginning of a new learning model designed for impact and mastery.
+            It's a 10-week beginner-level program designed for individuals looking to start or transition into Data Analysis or Data Science.
           </p>
         </motion.div>
 

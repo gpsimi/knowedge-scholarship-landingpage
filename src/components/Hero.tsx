@@ -30,7 +30,7 @@ const Hero = () => {
               className="mb-6 inline-flex items-center rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary"
             >
               <Calendar className="mr-2 h-4 w-4" />
-              Applications Open: December 1, 2025
+              Applications Open: December 1, 2025 - January 15, 2026
             </motion.div>
 
             <motion.h1
@@ -50,8 +50,8 @@ const Hero = () => {
               className="mb-8 text-lg text-muted-foreground sm:text-xl max-w-2xl mx-auto lg:mx-0"
             >
               Join KnowEdge Tech Hub's Pilot Cohort and gain practical data skills, critical
-              thinking, and real-world project experience. Bridge the gap between theory and
-              practice.
+              thinking, and real-world project experience. Our 10-week program is designed to
+              bridge the gap between theory and practice in data education.
             </motion.p>
 
             <motion.div
