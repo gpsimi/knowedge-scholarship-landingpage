@@ -1,4 +1,7 @@
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { useTheme } from "next-themes";
+import LogoLight from "@/assets/KE-logo-light.png";
+import LogoDark from "@/assets/KE-logo-dark.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -30,10 +33,19 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
+              
+              <a href="#" className="flex items-center space-x-2">
+                <img 
+                  src={useTheme().theme === 'dark' ? LogoDark : LogoLight} 
+                  alt="KnowEdge Tech Hub Logo" 
+                  className="w-[200px]" 
+                />
+              </a>
+              
+              {/* <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
                 <span className="text-xl font-bold text-primary-foreground">K</span>
               </div>
-              <span className="text-xl font-bold text-foreground">KnowEdge Tech Hub</span>
+              <span className="text-xl font-bold text-foreground">KnowEdge Tech Hub</span> */}
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
               The education arm of KnowEdge Technologies Limited, bridging the gap between theory

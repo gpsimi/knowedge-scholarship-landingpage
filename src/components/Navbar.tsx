@@ -30,23 +30,23 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between py-8">
           <div className="flex items-center space-x-4">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center"
             >
               <a href="#" className="flex items-center space-x-2">
-                <img 
-                  src={useTheme().theme === 'light' ? LogoLight : LogoDark} 
-                  alt="KnowEdge Tech Hub Logo" 
-                  className="w-[200px]" 
+                <img
+                  src={useTheme().theme === 'dark' ? LogoDark : LogoLight}
+                  alt="KnowEdge Tech Hub Logo"
+                  className="w-[200px]"
                 />
               </a>
             </motion.div>
           </div>
 
           {/* Desktop Navigation */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             className="hidden md:flex md:items-center md:space-x-6"
@@ -62,7 +62,7 @@ const Navbar = () => {
             ))}
             <div className="flex items-center space-x-4">
               <ThemeToggle />
-              <Button 
+              <Button
                 onClick={() => scrollToSection("#scholarship")}
                 className="bg-primary text-primary-foreground hover:bg-primary/90"
               >
@@ -99,13 +99,13 @@ const Navbar = () => {
               className="fixed inset-0 z-40 bg-black md:hidden"
               onClick={() => setMobileMenuOpen(false)}
             />
-            
+
             {/* Mobile Menu */}
             <motion.div
               initial={{ y: '-100%', opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: '-100%', opacity: 0 }}
-              transition={{ 
+              transition={{
                 type: 'spring',
                 damping: 25,
                 stiffness: 300,
@@ -118,10 +118,11 @@ const Navbar = () => {
             >
               <div className="flex h-16 items-center justify-between px-6">
                 <div className="flex items-center space-x-2">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-                    <span className="text-lg font-bold text-primary-foreground">K</span>
-                  </div>
-                  <span className="text-lg font-bold">KnowEdge Tech Hub</span>
+                  <img
+                    src={useTheme().theme === 'dark' ? LogoDark : LogoLight}
+                    alt="KnowEdge Tech Hub Logo"
+                    className="w-[200px]"
+                  />
                 </div>
                 <button
                   onClick={() => setMobileMenuOpen(false)}
@@ -130,7 +131,7 @@ const Navbar = () => {
                   <X className="h-6 w-6" />
                 </button>
               </div>
-              
+
               <nav className="flex flex-col p-4 pt-0">
                 {navLinks.map((link) => (
                   <button
@@ -144,7 +145,7 @@ const Navbar = () => {
                     {link.name}
                   </button>
                 ))}
-                <Button 
+                <Button
                   onClick={() => {
                     scrollToSection("#scholarship");
                     setMobileMenuOpen(false);
