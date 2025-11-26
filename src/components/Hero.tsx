@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar } from "lucide-react";
-import heroImage from "@/assets/hero.jpg";
+import heroImage from "@/assets/flyer.jpeg";
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -105,14 +105,12 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.7 }}
             className="relative"
           >
-            <div className="aspect-video overflow-hidden rounded-2xl shadow-2xl ring-1 ring-border">
-              <img
-                src={heroImage}
-                alt="KnowEdge Tech Hub - Data Education Platform"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-6 -right-6 rounded-xl bg-primary px-6 py-4 text-primary-foreground shadow-xl hidden sm:block">
+            <img
+              src={heroImage}
+              alt="KnowEdge Tech Hub - Data Education Platform"
+              className="h-full object-cover rounded-2xl w-[500px]"
+            />
+            <div className="absolute -bottom-6 right-3 rounded-xl bg-primary px-6 py-4 text-primary-foreground shadow-xl hidden sm:block">
               <div className="text-3xl font-bold">50</div>
               <div className="text-sm">Scholarship Slots</div>
             </div>
