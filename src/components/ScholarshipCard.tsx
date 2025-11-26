@@ -14,8 +14,8 @@ const ScholarshipCard = () => {
   ];
 
   const timeline = [
-    { event: "Applications Open", date: "December 1, 2025" },
-    { event: "Application Deadline", date: "January 15, 2026" },
+    { event: "Applications Open", date: "December 5, 2025" },
+    { event: "Application Deadline", date: "December 26, 2026" },
     { event: "Cohort Start Date", date: "February 2026" },
   ];
 

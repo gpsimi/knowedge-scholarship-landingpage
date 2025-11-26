@@ -71,9 +71,9 @@ This is your chance to gain access to high-quality data education — completely
 
 ### Application Timeline:
 
-* Applications Open: December 1, 2025
+* Applications Open: December 5, 2025
 
-* Application Deadline: January 15, 2026
+* Application Deadline: December 26, 2026
 
 * Cohort Start Date: February 2026
 

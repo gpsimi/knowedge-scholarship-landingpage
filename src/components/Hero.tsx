@@ -30,7 +30,7 @@ const Hero = () => {
               className="mb-6 inline-flex items-center rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary"
             >
               <Calendar className="mr-2 h-4 w-4" />
-              Applications Open: December 1, 2025 - January 15, 2026
+              Applications Open: December 5, 2025 - December 26, 2026
             </motion.div>
 
             <motion.h1
