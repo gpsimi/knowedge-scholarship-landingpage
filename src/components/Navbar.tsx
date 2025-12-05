@@ -66,7 +66,7 @@ const Navbar = () => {
                 onClick={() => scrollToSection("#scholarship")}
                 className="bg-primary text-primary-foreground hover:bg-primary/90"
               >
-                Join Waitlist
+                Apply Now
               </Button>
             </div>
           </motion.div>
@@ -152,7 +152,7 @@ const Navbar = () => {
                   }}
                   className="w-full mt-2 mx-4 mb-4 bg-primary py-5 text-lg font-medium text-primary-foreground hover:bg-primary/90 rounded-lg"
                 >
-                  Join Waitlist
+                  Apply Now
                 </Button>
               </nav>
             </motion.div>

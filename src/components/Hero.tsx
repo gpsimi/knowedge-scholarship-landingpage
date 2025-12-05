@@ -65,7 +65,7 @@ const Hero = () => {
                 onClick={() => scrollToSection("#scholarship")}
                 className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
               >
-                Apply for Scholarship
+                Apply Now!
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button

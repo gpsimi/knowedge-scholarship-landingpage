@@ -127,11 +127,11 @@ const ScholarshipCard = () => {
                 asChild
               >
                 <a
-                  href="https://chat.whatsapp.com/KCWc5OmiCwH1qjgiVMvUuW?mode=hqrt2"
+                  href="https://forms.gle/diAbpJFPUdKPNeVbA"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Join the Waitlist
+                  Apply Now
                   <ExternalLink className="ml-2 h-5 w-5" />
                 </a>
               </Button>
