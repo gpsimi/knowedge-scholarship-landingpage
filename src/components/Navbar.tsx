@@ -9,7 +9,7 @@ import LogoDark from "@/assets/KE-logo-dark.png";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { theme } = useTheme(); // Call useTheme unconditionally here
+  const { theme } = useTheme(); 
 
   const navLinks = [
     { name: "About", href: "#about" },
@@ -36,7 +36,7 @@ const Navbar = () => {
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center"
             >
-              <a href="#" className="flex items-center space-x-2">
+              <a href="/" className="flex items-center space-x-2">
                 <img
                   src={theme === 'dark' ? LogoDark : LogoLight}
                   alt="KnowEdge Tech Hub Logo"
