@@ -1,14 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Navbar from "@/components/Navbar";
 import ApplicationClosedImage from "@/assets/application-2.png";
 
 
 const ApplicationClosed = () => {
   return (
     <>
-      <Navbar />
       <div className="flex flex-col md:flex-row items-center justify-center h-[95vh]  px-4 py-10 md:space-x-24">
         <motion.div
           className="flex-shrink-0 mb-8 md:mb-0"
