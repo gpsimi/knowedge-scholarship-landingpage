@@ -17,7 +17,7 @@ const ApplicationClosed = () => {
         </div>
         <div className="text-center md:text-left">
           <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-4">
-            Application has Closed
+            Applications Closed!
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-md">
             Thank you for your interest. The application window for our scholarship program is currently closed. Please check back later for future opportunities.
