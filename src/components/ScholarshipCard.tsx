@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, Calendar, Clock, ExternalLink } from "lucide-react";
 import scholarshipImage from "@/assets/scholarship.jpg";
+import { Link } from "react-router-dom"; // Add Link import
 
 const ScholarshipCard = () => {
   const benefits = [
@@ -121,20 +122,18 @@ const ScholarshipCard = () => {
                 </ul>
               </div>
 
-              <Button
-                size="lg"
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-lg py-6"
-                asChild
-              >
-                <a
-                  href="https://forms.gle/diAbpJFPUdKPNeVbA"
-                  target="_blank"
-                  rel="noopener noreferrer"
+              <Link to="/application-closed">
+                <Button
+                  size="lg"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-lg py-6"
+                  asChild
                 >
-                  Apply Now
-                  <ExternalLink className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
+                  <a>
+                    Apply Now
+                    <ExternalLink className="ml-2 h-5 w-5" />
+                  </a>
+                </Button>
+              </Link>
             </Card>
           </motion.div>
         </div>

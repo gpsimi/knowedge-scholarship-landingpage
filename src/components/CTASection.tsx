@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom"; // Import Link
 
 const CTASection = () => {
   return (
     <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary/80" />
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30" />
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjEtIiBzdHJva2Utd2lkdGg9IjEiLz48L2NhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCIvPjwvcmVjdD48L3N2Zz4=')] opacity-30" />
       
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -66,21 +67,19 @@ const CTASection = () => {
             transition={{ delay: 0.6, duration: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <Button
-              size="lg"
-              variant="secondary"
-              className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 shadow-xl"
-              asChild
-            >
-              <a
-                href="https://chat.whatsapp.com/KCWc5OmiCwH1qjgiVMvUuW?mode=hqrt2"
-                target="_blank"
-                rel="noopener noreferrer"
+            <Link to="/application-closed"> {/* Use Link component */}
+              <Button
+                size="lg"
+                variant="secondary"
+                className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 shadow-xl"
+                asChild
               >
-                Apply Now
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
+                <a>
+                  Apply Now
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+            </Link>
           </motion.div>
 
           <motion.div
